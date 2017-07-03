@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="{{=it.assets.css}}">
+    <script>window.serveData={{=JSON.stringify(it.serveData)}}</script> </head>
+  <body>
+    <main>Live for nothing or die for something.</main>
+    <div>Hi {{=it.serveData.name}}!</div>
+    <div>{{=it.serveData.age || ''}}</div>
+    <div id="app">{{=it.ssr}}</div>
+    <script type="text/javascript" async="" src="{{=it.assets.js}}"></script>
+
+  </body>
+</html>
