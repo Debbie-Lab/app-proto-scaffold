@@ -1,17 +1,15 @@
-import Koa from 'koa'
-import http from 'http'
-import chalk from 'chalk'
-import recipes from 'app-proto-recipes'
+const Koa = require('koa')
+const http = require('http')
+const chalk = require('chalk')
+const config = require('../config')
 
-import config from '@config'
+const recipes = require('app-proto-recipes')
 
 const host = 'http://127.0.0.1'
-const port = process.env.PORT || config.port
+const port = process.env.PORT || config.port || 8088
 const url = `${host}:${port}`
 
 const app = new Koa()
-
-recipes(app, config)
 
 const success =
 `------------------------------------------------------------------------------------------
@@ -20,8 +18,9 @@ const success =
 
 ---------- ☝( ◠‿◠ )☝ ---------------------------------------------------------------------`
 
-http.createServer(app.callback()).listen(port,
-  () => setTimeout(() => console.log(success), 0)
-)
 
+
+const main = async () => await recipes(app, config)
+
+main().then(() => http.createServer(app.callback()).listen(port, () => setTimeout(() => console.log(success), 0)))
 

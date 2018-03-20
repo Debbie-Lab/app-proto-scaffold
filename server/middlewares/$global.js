@@ -1,4 +1,6 @@
-export default [
-  'dev-static',
-  'err-stack',
+
+const global = [
+  'ctx-render',
 ]
+
+module.exports = global

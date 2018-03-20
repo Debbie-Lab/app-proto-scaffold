@@ -7,14 +7,9 @@ const server = join(__dirname, '..', 'server')
 
 module.exports = {
   path: {
-    bundles: {
-      path: join(client, 'pages'),
-      whitelist: [],
-    },
-    context: join(server, 'context'),
-    controllers: join(server, 'controllers'),
-    datasources: join(server, 'datasources'),
+    'ctx-registers': join(server, 'ctx-registers'),
     middlewares: join(server, 'middlewares'),
+    controllers: join(server, 'controllers'),
     templates: join(server, 'templates'),
   },
   env: process.env.NODE_ENV || 'development',
