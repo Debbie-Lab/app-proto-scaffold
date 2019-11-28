@@ -1,0 +1,31 @@
+{
+  "name": "@app-proto/scaffold",
+  "version": "0.0.1",
+  "description": "Scaffold -> React+TypeScript+Nunjucks+Webpack.",
+  "main": "index.js",
+  "author": "solome",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "jest": "node_modules/.bin/jest"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "webpack": "^4.41.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.7.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.5",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0",
+    "typescript": "^3.7.2"
+  }
+}
